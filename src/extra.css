@@ -1,0 +1,97 @@
+
+
+/* bg effects */
+
+
+.test {
+    width: 311px;
+    height: 311px;
+    flex-shrink: 0;
+    border-radius: 311px;
+    background: #961A1A;
+    filter: blur(196px);
+    position: absolute;
+    top: 251px;
+    left: -102px;
+}
+.test2 {
+    width: 259px;
+    height: 259px;
+    flex-shrink: 0;
+    border-radius: 259px;
+    background: #833AB4;
+    filter: blur(196px);
+    top: -154px;
+    left: 42%;
+    position: absolute;
+
+}
+
+.ball-1, .ball-2, .ball-3 {
+    border-radius: 100px;
+}
+
+.ball-1-wrapper, .ball-2-wrapper, .ball-3-wrapper {
+    z-index: -1;
+}
+
+.ball-1 {
+    filter: drop-shadow(3px 6px 27px rgba(177, 118, 217, 0.25)) blur(5px);
+    backdrop-filter: blur(2px);
+    width: 60px;
+    height: 60px;
+}
+
+.ball-2 {
+    filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25));
+    backdrop-filter: blur(2px);
+    width: 83px;
+    height: 83px;
+}
+
+.ball-3 {
+    filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25)) blur(2.5px);
+    backdrop-filter: blur(2px);
+    width: 28px;
+    height: 28px;
+}
+
+/* gradient */
+
+.gradient {
+    background: var(--gradient, linear-gradient(90deg, #FCB045 36.99%, #FF3F78 100%));
+    background-position: left;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* list bullets */
+main li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+main li::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 1px;
+    background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+}
+
+
+
+@media (min-width: 768px) {
+    main li::before {
+        display: none;
+    }
+    main li {
+        flex-direction: column;
+        align-items: end;
+        gap: 6px;
+    }
+    main li>p {
+        text-align: end;
+    }
+}
